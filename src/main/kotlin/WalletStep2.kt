@@ -26,5 +26,18 @@ fun main() {
     println("Книги: $balance руб.")
 
     println("Конец месяца: $balance руб.")
+
+    val spent = rent + food + transport + books
+    val spentShare = spent * 100 / salary
+    val saved = salary - spent
+    val averageSpent = spent / 30
+    val averageSpentExact = spent.toDouble() / 30
+
+    println("--- Аналитика месяца ---")
+    println("Потрачено всего: $spent руб.")
+    println("Доля трат от дохода: $spentShare%")
+    println("Отложено за месяц: $saved руб.")
+    println("Средние траты в день: $averageSpent руб.")
+    println("Точнее: $averageSpentExact руб.")
 }
 
